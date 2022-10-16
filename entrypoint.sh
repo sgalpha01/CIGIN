@@ -1,3 +1,15 @@
 #!/bin/bash
-RUN_PORT=${PORT:-8080}
-/usr/local/bin/gunicorn --worker-tmp-dir /dev/shm --config gunicorn.config.py app.main:app --bind "0.0.0.0:${RUN_PORT}"
+
+export PYTHONPATH="$PYTHONPATH:$(pwd)"
+
+solute=$1
+solvent=$2
+
+if [ $# -gt 2 ] 
+then
+    echo "You can only enter two arguments at max. " 
+    echo "Don't worry, I've handled it for you by passing only the first two :)"
+fi
+
+python3 cigin_app/run.py --solute "$solute" --solvent "$solvent"
+
