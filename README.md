@@ -3,5 +3,5 @@
 ## Harsha Satyavardhan (2022701014)
 ## Suyash Gupta (2021711003)
 
-- Example Command
-    - `./entrypoint.sh <solute> <solvent>`
+- Command:
+    - `./entrypoint.sh <solute_smiles> <solvent_smiles>`
